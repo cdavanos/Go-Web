@@ -7,8 +7,15 @@
     
     <body>
         <ul>
-            {{range $index, $element := .}}
-            <li>{{$index}} - {{$element}}</li>
+            {{range .Wisdom}}
+            <li>{{.Name}} - {{.Motto}}</li>
+            {{end}}
+        </ul>
+
+
+        <ul>
+            {{range .Transport}}
+            <li>{{.Manufacturer}} - {{.Model}} - {{.Doors}}</li>
             {{end}}
         </ul>
     </body>
