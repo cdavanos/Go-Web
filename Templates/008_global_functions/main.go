@@ -29,27 +29,37 @@ func main() {
 	// 	"McFly",
 	// }
 
-	u1 := user{
-		Name:  "Buddha",
-		Motto: "Something",
-		Admin: false,
+	// using if and
+	// u1 := user{
+	// 	Name:  "Buddha",
+	// 	Motto: "Something",
+	// 	Admin: false,
+	// }
+
+	// u2 := user{
+	// 	Name:  "Ghandi",
+	// 	Motto: "Else",
+	// 	Admin: true,
+	// }
+
+	// u3 := user{
+	// 	Name:  "",
+	// 	Motto: "Nobody",
+	// 	Admin: true,
+	// }
+
+	// users := []user{u1, u2, u3}
+
+	// testing comparison
+	g1 := struct {
+		Score1 int
+		Score2 int
+	}{
+		7,
+		9,
 	}
 
-	u2 := user{
-		Name:  "Ghandi",
-		Motto: "Else",
-		Admin: true,
-	}
-
-	u3 := user{
-		Name:  "",
-		Motto: "Nobody",
-		Admin: true,
-	}
-
-	users := []user{u1, u2, u3}
-
-	err := tpl.Execute(os.Stdout, users)
+	err := tpl.Execute(os.Stdout, g1)
 	if err != nil {
 		log.Fatalln(err)
 	}
